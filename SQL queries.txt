@@ -1,0 +1,68 @@
+
+
+2.Write the queries for implementing the following functions
+
+a) MAX
+b) MIN
+c) AVG
+d) COUNT
+e) SUM
+create table student(s_name varchar(20),s_marks int);
+insert into student values('Rutuja',90);
+insert into student values('Ruhi',80);
+insert into student values('Heera',75);
+insert into student values('Pratik',88);
+insert into student values('priya',97);
+
+a) select  MAX(s_marks) from student;
+b) select  MIN(s_marks) from student;
+c) select  AVG(s_marks) from student;
+d) select  COUNT(*) from student;
+e) select  SUM(s_marks) from student;
+
+
+
+
+
+
+
+4. 
+1.select * from movies where myear>1997;
+2. select * from movies where Director='Hanson' ;
+3. select title,rating from movies ;
+
+5. 
+1. select * from Employee;
+2. select EMPNO ,SALARY from employee;
+3.select avg(SALARY) from employee;
+4.select count(*) from employee;
+5.select distinct BRANCH from employee;
+6.select SUM(SALARY) from employee; 
+7.SELECT EMP_NAME, BRANCH
+FROM employee
+WHERE SALARY > (SELECT SUM(SALARY) FROM employee);
+8.select EMP_NAME, EMPNO from employee order by salary desc;
+9.select * from employee where EMP_NAME='AMIT',SALARY>50000;
+
+
+
+9. Consider the above table :
+1. Create this table with all the data as shown in the picture
+2. Display details of product whose warranty is more than 2 years
+3. Display all the details of Smart Tv
+4. Display the price of those products whose quantity is null
+5. Display all the products where the price is higher than the average
+
+1. create table product(p_id int,p_price int,p_name varchar(20),p_warranty int,p_qty int);
+insert into product values(1,35000,'Washing Machine',3,10);
+insert into product values(2,45000,'Smart TV',2,5);
+insert into product values(3,33000,'AC',5,6);
+insert into product values(4,20000,'Home Theater',1,0);
+2.select * from product where p_Warranty>2;
+3.select *  from product where p_id=2;
+4.select * from product where p_qty=null;
+5.select * from product where p_price > (select avg(p_price) from movies);
+
+
+
+ 
